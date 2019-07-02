@@ -1,4 +1,4 @@
-package lejit.test.aop.service;
+package lejit.test.aopXML.service;
 
 import java.sql.Date;
 

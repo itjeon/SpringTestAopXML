@@ -1,4 +1,4 @@
-package lejit.test.aop.service.impl;
+package lejit.test.aopXML.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lejit.test.aop.service.BoardService;
-import lejit.test.aop.service.BoardVO;
+import lejit.test.aopXML.service.BoardService;
+import lejit.test.aopXML.service.BoardVO;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {

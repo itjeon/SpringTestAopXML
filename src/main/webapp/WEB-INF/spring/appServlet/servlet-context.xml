@@ -12,8 +12,18 @@
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
 	<!-- Enables the Spring MVC @Controller programming model -->
-	<aop:aspectj-autoproxy />
-    <beans:bean id="testAdvice" class="lejit.test.aop.advice.TestAdvice" />
+	<aop:config>
+        <aop:pointcut id="testPointCut" expression="execution(* lejit.test.aopXML.web.*Controller.*(..))" />
+        <aop:aspect ref="testAdvice">
+            <aop:after-throwing throwing="exception" pointcut-ref="testPointCut" method="afterThrowingMethod" />
+            <aop:before pointcut-ref="testPointCut" method="beforeMethod"/>
+            <aop:after pointcut-ref="testPointCut" method="afterMethod"/>
+            <aop:after-returning pointcut-ref="testPointCut" method="afterReturningMethod" returning="returnString"/>
+            <aop:around pointcut-ref="testPointCut" method="aroundMethod"/>
+        </aop:aspect>
+    </aop:config>
+    
+    <beans:bean id="testAdvice" class="lejit.test.aopXML.advice.TestAdvice" />
     
     <annotation-driven />
     <context:component-scan base-package="lejit" />
@@ -27,8 +37,6 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="lejit.test.aop" />
-	
-	
+	<context:component-scan base-package="lejit" />
 	
 </beans:beans>

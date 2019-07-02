@@ -1,4 +1,4 @@
-package lejit.test.aop.web;
+package lejit.test.aopXML.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +16,7 @@ public class TestController {
 		logger.info("call aop.do");
 		
 		
-		boolean flag = true;
+		boolean flag = false;
 		if(flag) {
 			throw new RuntimeException("Test Exception!");
 		}
