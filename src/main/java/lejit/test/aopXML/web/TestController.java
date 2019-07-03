@@ -16,7 +16,7 @@ public class TestController {
 		logger.info("call aop.do");
 		
 		
-		boolean flag = false;
+		boolean flag = true;
 		if(flag) {
 			throw new RuntimeException("Test Exception!");
 		}

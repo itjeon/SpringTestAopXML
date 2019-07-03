@@ -2,11 +2,9 @@ package lejit.test.aopXML.advice;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.Aspect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Aspect
 public class TestAdvice {
 	
 	private static final Logger logger = LoggerFactory.getLogger(TestAdvice.class);
